@@ -13,10 +13,18 @@
 		EDB4A28A1A8C006200963137 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB4A2891A8C006200963137 /* Images.xcassets */; };
 		EDB4A28D1A8C006200963137 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDB4A28B1A8C006200963137 /* LaunchScreen.xib */; };
 		EDB4A2991A8C006200963137 /* FindTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4A2981A8C006200963137 /* FindTests.swift */; };
+		EDB4A2AB1A8C052800963137 /* FindFunctionalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4A2AA1A8C052800963137 /* FindFunctionalTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		EDB4A2931A8C006200963137 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDB4A2751A8C006200963137 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDB4A27C1A8C006200963137;
+			remoteInfo = Find;
+		};
+		EDB4A2AC1A8C052800963137 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EDB4A2751A8C006200963137 /* Project object */;
 			proxyType = 1;
@@ -36,6 +44,9 @@
 		EDB4A2921A8C006200963137 /* FindTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB4A2971A8C006200963137 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDB4A2981A8C006200963137 /* FindTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindTests.swift; sourceTree = "<group>"; };
+		EDB4A2A61A8C052800963137 /* FindFunctionalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindFunctionalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDB4A2A91A8C052800963137 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDB4A2AA1A8C052800963137 /* FindFunctionalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFunctionalTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +64,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EDB4A2A31A8C052800963137 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -61,6 +79,7 @@
 			children = (
 				EDB4A27F1A8C006200963137 /* Find */,
 				EDB4A2951A8C006200963137 /* FindTests */,
+				EDB4A2A71A8C052800963137 /* FindFunctionalTests */,
 				EDB4A27E1A8C006200963137 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,6 +89,7 @@
 			children = (
 				EDB4A27D1A8C006200963137 /* Find.app */,
 				EDB4A2921A8C006200963137 /* FindTests.xctest */,
+				EDB4A2A61A8C052800963137 /* FindFunctionalTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,6 +132,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		EDB4A2A71A8C052800963137 /* FindFunctionalTests */ = {
+			isa = PBXGroup;
+			children = (
+				EDB4A2AA1A8C052800963137 /* FindFunctionalTests.swift */,
+				EDB4A2A81A8C052800963137 /* Supporting Files */,
+			);
+			path = FindFunctionalTests;
+			sourceTree = "<group>";
+		};
+		EDB4A2A81A8C052800963137 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EDB4A2A91A8C052800963137 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,6 +187,24 @@
 			productReference = EDB4A2921A8C006200963137 /* FindTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		EDB4A2A51A8C052800963137 /* FindFunctionalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDB4A2AE1A8C052800963137 /* Build configuration list for PBXNativeTarget "FindFunctionalTests" */;
+			buildPhases = (
+				EDB4A2A21A8C052800963137 /* Sources */,
+				EDB4A2A31A8C052800963137 /* Frameworks */,
+				EDB4A2A41A8C052800963137 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDB4A2AD1A8C052800963137 /* PBXTargetDependency */,
+			);
+			name = FindFunctionalTests;
+			productName = FindFunctionalTests;
+			productReference = EDB4A2A61A8C052800963137 /* FindFunctionalTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -163,6 +218,10 @@
 						CreatedOnToolsVersion = 6.1.1;
 					};
 					EDB4A2911A8C006200963137 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = EDB4A27C1A8C006200963137;
+					};
+					EDB4A2A51A8C052800963137 = {
 						CreatedOnToolsVersion = 6.1.1;
 						TestTargetID = EDB4A27C1A8C006200963137;
 					};
@@ -183,6 +242,7 @@
 			targets = (
 				EDB4A27C1A8C006200963137 /* Find */,
 				EDB4A2911A8C006200963137 /* FindTests */,
+				EDB4A2A51A8C052800963137 /* FindFunctionalTests */,
 			);
 		};
 /* End PBXProject section */
@@ -199,6 +259,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		EDB4A2901A8C006200963137 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDB4A2A41A8C052800963137 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -225,6 +292,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EDB4A2A21A8C052800963137 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDB4A2AB1A8C052800963137 /* FindFunctionalTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -232,6 +307,11 @@
 			isa = PBXTargetDependency;
 			target = EDB4A27C1A8C006200963137 /* Find */;
 			targetProxy = EDB4A2931A8C006200963137 /* PBXContainerItemProxy */;
+		};
+		EDB4A2AD1A8C052800963137 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDB4A27C1A8C006200963137 /* Find */;
+			targetProxy = EDB4A2AC1A8C052800963137 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -388,6 +468,47 @@
 			};
 			name = Release;
 		};
+		EDB4A2AF1A8C052800963137 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FindFunctionalTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Find.app/Find";
+			};
+			name = Debug;
+		};
+		EDB4A2B01A8C052800963137 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FindFunctionalTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Find.app/Find";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -413,6 +534,14 @@
 			buildConfigurations = (
 				EDB4A2A01A8C006200963137 /* Debug */,
 				EDB4A2A11A8C006200963137 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EDB4A2AE1A8C052800963137 /* Build configuration list for PBXNativeTarget "FindFunctionalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDB4A2AF1A8C052800963137 /* Debug */,
+				EDB4A2B01A8C052800963137 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
