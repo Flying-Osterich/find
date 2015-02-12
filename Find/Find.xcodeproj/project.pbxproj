@@ -29,7 +29,6 @@
 		30E9BD0C0A315851378B141E /* Pods-FindTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FindTests/Pods-FindTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6311801A7A979BC4A872B3CE /* Pods-FindTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FindTests/Pods-FindTests.release.xcconfig"; sourceTree = "<group>"; };
 		6B0A35C1C71410536A4C5163 /* libPods-FindTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FindTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		99DEEC7CBC344F6D2415C667 /* libPods-FindFunctionalTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FindFunctionalTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB4A27D1A8C006200963137 /* Find.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Find.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB4A2811A8C006200963137 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDB4A2821A8C006200963137 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,7 +64,6 @@
 		817E2ECBB39B2B6BEE7F3189 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				99DEEC7CBC344F6D2415C667 /* libPods-FindFunctionalTests.a */,
 				6B0A35C1C71410536A4C5163 /* libPods-FindTests.a */,
 			);
 			name = Frameworks;
