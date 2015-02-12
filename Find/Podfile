@@ -7,4 +7,5 @@ end
 
 target 'FindTests' do
 	pod 'Quick', '~> 0.2'
+	pod 'Nimble'
 end
