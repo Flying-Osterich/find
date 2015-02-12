@@ -7,25 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3900FFF7D2775FC1C5D7CE33 /* libPods-FindFunctionalTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99DEEC7CBC344F6D2415C667 /* libPods-FindFunctionalTests.a */; };
 		870C97DFCE7B2D5A39EBB16E /* libPods-FindTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0A35C1C71410536A4C5163 /* libPods-FindTests.a */; };
 		EDB4A2831A8C006200963137 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4A2821A8C006200963137 /* AppDelegate.swift */; };
 		EDB4A2851A8C006200963137 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4A2841A8C006200963137 /* ViewController.swift */; };
 		EDB4A2881A8C006200963137 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB4A2861A8C006200963137 /* Main.storyboard */; };
 		EDB4A28A1A8C006200963137 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB4A2891A8C006200963137 /* Images.xcassets */; };
 		EDB4A28D1A8C006200963137 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDB4A28B1A8C006200963137 /* LaunchScreen.xib */; };
-		EDB4A2AB1A8C052800963137 /* FindFunctionalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4A2AA1A8C052800963137 /* FindFunctionalTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		EDB4A2931A8C006200963137 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EDB4A2751A8C006200963137 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EDB4A27C1A8C006200963137;
-			remoteInfo = Find;
-		};
-		EDB4A2AC1A8C052800963137 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EDB4A2751A8C006200963137 /* Project object */;
 			proxyType = 1;
@@ -50,7 +41,6 @@
 		EDB4A28C1A8C006200963137 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		EDB4A2921A8C006200963137 /* FindTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB4A2971A8C006200963137 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EDB4A2A61A8C052800963137 /* FindFunctionalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindFunctionalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB4A2A91A8C052800963137 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDB4A2AA1A8C052800963137 /* FindFunctionalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFunctionalTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,14 +58,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				870C97DFCE7B2D5A39EBB16E /* libPods-FindTests.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EDB4A2A31A8C052800963137 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3900FFF7D2775FC1C5D7CE33 /* libPods-FindFunctionalTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,7 +101,6 @@
 			children = (
 				EDB4A27D1A8C006200963137 /* Find.app */,
 				EDB4A2921A8C006200963137 /* FindTests.xctest */,
-				EDB4A2A61A8C052800963137 /* FindFunctionalTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -218,26 +199,6 @@
 			productReference = EDB4A2921A8C006200963137 /* FindTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		EDB4A2A51A8C052800963137 /* FindFunctionalTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EDB4A2AE1A8C052800963137 /* Build configuration list for PBXNativeTarget "FindFunctionalTests" */;
-			buildPhases = (
-				62C4DE2F64E3FC357E9B8004 /* Check Pods Manifest.lock */,
-				EDB4A2A21A8C052800963137 /* Sources */,
-				EDB4A2A31A8C052800963137 /* Frameworks */,
-				EDB4A2A41A8C052800963137 /* Resources */,
-				B198F1C83E1F3B7AB0C79924 /* Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EDB4A2AD1A8C052800963137 /* PBXTargetDependency */,
-			);
-			name = FindFunctionalTests;
-			productName = FindFunctionalTests;
-			productReference = EDB4A2A61A8C052800963137 /* FindFunctionalTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -251,10 +212,6 @@
 						CreatedOnToolsVersion = 6.1.1;
 					};
 					EDB4A2911A8C006200963137 = {
-						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = EDB4A27C1A8C006200963137;
-					};
-					EDB4A2A51A8C052800963137 = {
 						CreatedOnToolsVersion = 6.1.1;
 						TestTargetID = EDB4A27C1A8C006200963137;
 					};
@@ -275,7 +232,6 @@
 			targets = (
 				EDB4A27C1A8C006200963137 /* Find */,
 				EDB4A2911A8C006200963137 /* FindTests */,
-				EDB4A2A51A8C052800963137 /* FindFunctionalTests */,
 			);
 		};
 /* End PBXProject section */
@@ -298,13 +254,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EDB4A2A41A8C052800963137 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -321,36 +270,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FindTests/Pods-FindTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		62C4DE2F64E3FC357E9B8004 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		B198F1C83E1F3B7AB0C79924 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FindFunctionalTests/Pods-FindFunctionalTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CC9CFD5F94051120C62E286A /* Check Pods Manifest.lock */ = {
@@ -387,14 +306,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EDB4A2A21A8C052800963137 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EDB4A2AB1A8C052800963137 /* FindFunctionalTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -402,11 +313,6 @@
 			isa = PBXTargetDependency;
 			target = EDB4A27C1A8C006200963137 /* Find */;
 			targetProxy = EDB4A2931A8C006200963137 /* PBXContainerItemProxy */;
-		};
-		EDB4A2AD1A8C052800963137 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EDB4A27C1A8C006200963137 /* Find */;
-			targetProxy = EDB4A2AC1A8C052800963137 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -565,49 +471,6 @@
 			};
 			name = Release;
 		};
-		EDB4A2AF1A8C052800963137 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DE2380C125529A0C4635C04D /* Pods-FindFunctionalTests.debug.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = FindFunctionalTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Find.app/Find";
-			};
-			name = Debug;
-		};
-		EDB4A2B01A8C052800963137 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4F04BB362269A8CF98185CEF /* Pods-FindFunctionalTests.release.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = FindFunctionalTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Find.app/Find";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -634,15 +497,6 @@
 			buildConfigurations = (
 				EDB4A2A01A8C006200963137 /* Debug */,
 				EDB4A2A11A8C006200963137 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EDB4A2AE1A8C052800963137 /* Build configuration list for PBXNativeTarget "FindFunctionalTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EDB4A2AF1A8C052800963137 /* Debug */,
-				EDB4A2B01A8C052800963137 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -34,20 +34,6 @@
                ReferencedContainer = "container:Find.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EDB4A2A51A8C052800963137"
-               BuildableName = "FindFunctionalTests.xctest"
-               BlueprintName = "FindFunctionalTests"
-               ReferencedContainer = "container:Find.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -63,16 +49,6 @@
                BlueprintIdentifier = "EDB4A2911A8C006200963137"
                BuildableName = "FindTests.xctest"
                BlueprintName = "FindTests"
-               ReferencedContainer = "container:Find.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EDB4A2A51A8C052800963137"
-               BuildableName = "FindFunctionalTests.xctest"
-               BlueprintName = "FindFunctionalTests"
                ReferencedContainer = "container:Find.xcodeproj">
             </BuildableReference>
          </TestableReference>
