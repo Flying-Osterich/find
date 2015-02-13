@@ -14,6 +14,8 @@
 		EDB4A28A1A8C006200963137 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB4A2891A8C006200963137 /* Images.xcassets */; };
 		EDB4A28D1A8C006200963137 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDB4A28B1A8C006200963137 /* LaunchScreen.xib */; };
 		EDD8D90F1A8C5A0A003D0ABD /* ViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD8D90E1A8C5A0A003D0ABD /* ViewControllerSpec.swift */; };
+		EDD8D9101A8D70E9003D0ABD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4A2841A8C006200963137 /* ViewController.swift */; };
+		EDD8D9111A8D7503003D0ABD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB4A2861A8C006200963137 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -249,6 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDD8D9111A8D7503003D0ABD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +319,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDD8D9101A8D70E9003D0ABD /* ViewController.swift in Sources */,
 				EDD8D90F1A8C5A0A003D0ABD /* ViewControllerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
