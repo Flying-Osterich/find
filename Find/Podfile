@@ -5,7 +5,7 @@ target 'Find' do
 
 end
 
-target 'FindTests' do
-	pod 'Quick', '~> 0.2'
-	pod 'Nimble'
+target 'FindTests', :exclusive => true do
+	pod 'Quick', '~> 0.2', :configurations => ['Debug']
+	pod 'Nimble', :configurations => ['Debug']
 end
