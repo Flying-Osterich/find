@@ -6,31 +6,32 @@
 //  Copyright (c) 2015 Justin.Dombecki. All rights reserved.
 //
 
-import UIKit
-import XCTest
+class AddTextTests: KIFTestCase {
+    
+    func testTextToTestView() {
+        addTextToTextView()
+    }
+    
+}
 
-class FindFunctionalTests: XCTestCase {
+// MARK: Test Details
+
+private extension AddTextTests {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func addTextToTextView() {
+        tester.enterText(TextInput.Content.rawValue, intoViewWithAccessibilityLabel: TextView.searchableContent.rawValue)
+        tester.waitForViewWithAccessibilityLabel(TextView.searchableContent.rawValue, value: TextInput.Content.rawValue, traits: UIAccessibilityTraitNone)
+    }
+}
+
+// MARK: Setup Accessibility Labels
+
+private extension AddTextTests {
+    enum TextView: String {
+        case searchableContent = "Searchable Content"
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    enum TextInput: String {
+        case Content = "If this is visible, the text view is accepting text."
     }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock() {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
 }
