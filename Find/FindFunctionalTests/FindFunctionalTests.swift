@@ -2,11 +2,11 @@
 //  FindFunctionalTests.swift
 //  FindFunctionalTests
 //
-//  Created by Justin.Dombecki on 2/11/15.
+//  Created by Justin.Dombecki on 2/18/15.
 //  Copyright (c) 2015 Justin.Dombecki. All rights reserved.
 //
 
-import Cocoa
+import UIKit
 import XCTest
 
 class FindFunctionalTests: XCTestCase {
