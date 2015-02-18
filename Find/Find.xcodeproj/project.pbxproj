@@ -112,9 +112,8 @@
 		ED27B6F61A94570700B1BE91 /* FindFunctionalTests */ = {
 			isa = PBXGroup;
 			children = (
-				ED27B7001A9458A500B1BE91 /* FindFunctionalTests-Bridging-Header.h */,
-				ED27B7041A9458DF00B1BE91 /* KIF+SwiftExtension.swift */,
 				ED27B6F91A94570700B1BE91 /* FindFunctionalTests.swift */,
+				ED27B7061A9460A900B1BE91 /* Essentials for Swift */,
 				ED27B6F71A94570700B1BE91 /* Supporting Files */,
 			);
 			path = FindFunctionalTests;
@@ -126,6 +125,15 @@
 				ED27B6F81A94570700B1BE91 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ED27B7061A9460A900B1BE91 /* Essentials for Swift */ = {
+			isa = PBXGroup;
+			children = (
+				ED27B7001A9458A500B1BE91 /* FindFunctionalTests-Bridging-Header.h */,
+				ED27B7041A9458DF00B1BE91 /* KIF+SwiftExtension.swift */,
+			);
+			name = "Essentials for Swift";
 			sourceTree = "<group>";
 		};
 		EDB4A2741A8C006200963137 = {
