@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gUE-l1-be5">
-                                <rect key="frame" x="31" y="165" width="553" height="435"/>
+                                <rect key="frame" x="16" y="165" width="568" height="415"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration" label="Searchable Content"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -27,9 +27,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="gUE-l1-be5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="CAS-DC-6Tm"/>
+                            <constraint firstItem="gUE-l1-be5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="CAS-DC-6Tm"/>
                             <constraint firstItem="gUE-l1-be5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="145" id="IoP-1L-ZxY"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gUE-l1-be5" secondAttribute="bottom" id="o5M-on-9Gx"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gUE-l1-be5" secondAttribute="bottom" constant="20" id="o5M-on-9Gx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gUE-l1-be5" secondAttribute="trailing" id="zRN-gz-Yxv"/>
                         </constraints>
                     </view>
