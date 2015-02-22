@@ -56,7 +56,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ED27B6E51A9456D200B1BE91"
+               BlueprintIdentifier = "ED27B6F41A94570700B1BE91"
                BuildableName = "FindFunctionalTests.xctest"
                BlueprintName = "FindFunctionalTests"
                ReferencedContainer = "container:Find.xcodeproj">
@@ -81,20 +81,10 @@
             </BuildableReference>
          </TestableReference>
          <TestableReference
-            skipped = "NO">
+            skipped = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ED27B6D61A94565F00B1BE91"
-               BuildableName = "FindFuncationalTests.xctest"
-               BlueprintName = "FindFuncationalTests"
-               ReferencedContainer = "container:Find.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ED27B6E51A9456D200B1BE91"
+               BlueprintIdentifier = "ED27B6F41A94570700B1BE91"
                BuildableName = "FindFunctionalTests.xctest"
                BlueprintName = "FindFunctionalTests"
                ReferencedContainer = "container:Find.xcodeproj">
