@@ -9,12 +9,19 @@
 import Foundation
 
 class Finder {
-    func find(theWord:String, inTheArray:[String]) -> Int {
-        for (index, word) in enumerate(inTheArray) {
-            if word == theWord {
-                return index
-            }
+    func find(theWord:String, inString:String) -> NSRange {
+        var range = NSMakeRange(0, 0)
+        var error: NSError?
+        let wantedRegex = NSRegularExpression(pattern: "\(theWord)", options: .CaseInsensitive, error: &error)
+        if let regex = wantedRegex  {
+            let count = countElements(inString)
+            regex.enumerateMatchesInString(inString, options: .ReportProgress, range: NSMakeRange(0, count), usingBlock: { (var result, var matchingFlags, var stop) in
+                if (result != nil) {
+                    println("\(result)")
+                    range = result.range
+                }
+            })
         }
-        return -1
+        return range
     }
 }
