@@ -4,13 +4,18 @@ import Nimble
 class FinderSpec: QuickSpec {
     override func spec() {
         describe("a Finder") {
-            it("should locate a word in a string of words") {
-                let stringOfWords = "this is a string of words"
+            it("should locate a word all the occurances in a string of words") {
+                let stringOfWords = "these words make a string of words"
                 let finder = Finder()
-                let range = finder.find("word", inString: stringOfWords)
-                let length = range.length
-                expect(range.length).to(equal(4))
-                expect(range.location).to(equal(20))
+                let ranges = finder.find("word", inString: stringOfWords)
+                
+                let firstOccurance = ranges[0]
+                expect(firstOccurance.length).to(equal(4))
+                expect(firstOccurance.location).to(equal(6))
+                
+                let secondOccurance = ranges[1]
+                expect(secondOccurance.length).to(equal(4))
+                expect(secondOccurance.location).to(equal(29))
             }
         }
     }
