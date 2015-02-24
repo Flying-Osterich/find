@@ -9,21 +9,19 @@
 import Foundation
 
 class Finder {
-    func find(string:String, inString:String) -> [NSRange] {
+    func find(theWord:String, inString:String) -> [NSRange] {
         var ranges = [NSRange]()
         var error: NSError?
-        let expectedRegex = NSRegularExpression(pattern: "\(string)", options: .CaseInsensitive, error: &error)
-        if error != nil {
-            if let regex = expectedRegex  {
-                let count = countElements(inString)
-                regex.enumerateMatchesInString(inString, options: .ReportProgress, range: NSMakeRange(0, count)) { (var result, var matchingFlags, var stop) in
-                    if (result != nil) {
-                        ranges += [result.range]
-                    }
+        let wantedRegex = NSRegularExpression(pattern: "\(theWord)", options: .CaseInsensitive, error: &error)
+        if let regex = wantedRegex  {
+            let count = countElements(inString)
+            regex.enumerateMatchesInString(inString, options: .ReportProgress, range: NSMakeRange(0, count)) { (var result, var matchingFlags, var stop) in
+                if (result != nil) {
+                    println("\(result)")
+                    ranges += [result.range]
                 }
             }
-            return ranges
         }
-        return []
+        return ranges
     }
 }
