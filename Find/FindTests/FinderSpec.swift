@@ -17,6 +17,15 @@ class FinderSpec: QuickSpec {
                 expect(secondOccurance.length).to(equal(4))
                 expect(secondOccurance.location).to(equal(29))
             }
+            
+            describe("#find:inString:") {
+                it("should return an empty array if a match was not found") {
+                    let string = "this is a string with characters"
+                    let finder = Finder()
+                    let ranges = finder.find("word", inString: string)
+                    expect(ranges).to(equal([]))
+                }
+            }
         }
     }
 }
