@@ -22,6 +22,6 @@ class Finder {
                 }
             }
         }
-        return range
+        return ranges
     }
 }
