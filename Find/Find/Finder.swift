@@ -9,15 +9,14 @@
 import Foundation
 
 class Finder {
-    func find(theWord:String, inString:String) -> [NSRange] {
-        var ranges = [NSRange]()
+    func find(string:String, inString:String) -> [NSRange] {
         var error: NSError?
-        let wantedRegex = NSRegularExpression(pattern: "\(theWord)", options: .CaseInsensitive, error: &error)
-        if let regex = wantedRegex  {
+        var ranges = [NSRange]()
+        let expectedRegex = NSRegularExpression(pattern: "\(string)", options: .CaseInsensitive, error: &error)
+        if let regex = expectedRegex  {
             let count = countElements(inString)
             regex.enumerateMatchesInString(inString, options: .ReportProgress, range: NSMakeRange(0, count)) { (var result, var matchingFlags, var stop) in
                 if (result != nil) {
-                    println("\(result)")
                     ranges += [result.range]
                 }
             }
