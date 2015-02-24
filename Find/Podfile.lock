@@ -6,9 +6,9 @@ PODS:
   - Quick (0.2.2)
 
 DEPENDENCIES:
-  - KIF (~> 3.0)
+  - KIF
   - Nimble
-  - Quick (~> 0.2)
+  - Quick
 
 SPEC CHECKSUMS:
   KIF: 068074b24dd455025e7f2a488ba4fb07b9ce047b

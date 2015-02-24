@@ -6,10 +6,10 @@ target 'Find' do
 end
 
 target 'FindTests', :exclusive => true do
-	pod 'Quick', '~> 0.2', :configurations => ['Debug']
+	pod 'Quick', :configurations => ['Debug']
 	pod 'Nimble', :configurations => ['Debug']
 end
 
 target 'FindFunctionalTests', :exclusive => true do
- 	 pod 'KIF', '~> 3.0', :configurations => ['Debug']
+ 	 pod 'KIF', :configurations => ['Debug']
 end
