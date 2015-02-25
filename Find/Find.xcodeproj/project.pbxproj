@@ -14,6 +14,9 @@
 		ED27B7081A99727A00B1BE91 /* Finder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27B7071A99727A00B1BE91 /* Finder.swift */; };
 		ED27B7091A99727A00B1BE91 /* Finder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27B7071A99727A00B1BE91 /* Finder.swift */; };
 		ED27B70B1A99729E00B1BE91 /* FinderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27B70A1A99729E00B1BE91 /* FinderSpec.swift */; };
+		ED27B7131A9D729600B1BE91 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27B7121A9D729600B1BE91 /* Tools.swift */; };
+		ED27B7141A9D729600B1BE91 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27B7121A9D729600B1BE91 /* Tools.swift */; };
+		ED27B7161A9D73C500B1BE91 /* ToolsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27B7151A9D73C500B1BE91 /* ToolsSpec.swift */; };
 		EDB4A2831A8C006200963137 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4A2821A8C006200963137 /* AppDelegate.swift */; };
 		EDB4A2851A8C006200963137 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4A2841A8C006200963137 /* ViewController.swift */; };
 		EDB4A2881A8C006200963137 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB4A2861A8C006200963137 /* Main.storyboard */; };
@@ -55,6 +58,8 @@
 		ED27B7041A9458DF00B1BE91 /* KIF+SwiftExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KIF+SwiftExtension.swift"; sourceTree = "<group>"; };
 		ED27B7071A99727A00B1BE91 /* Finder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Finder.swift; sourceTree = "<group>"; };
 		ED27B70A1A99729E00B1BE91 /* FinderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinderSpec.swift; sourceTree = "<group>"; };
+		ED27B7121A9D729600B1BE91 /* Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
+		ED27B7151A9D73C500B1BE91 /* ToolsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolsSpec.swift; sourceTree = "<group>"; };
 		EDB4A27D1A8C006200963137 /* Find.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Find.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB4A2811A8C006200963137 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDB4A2821A8C006200963137 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -169,6 +174,7 @@
 				EDB4A2821A8C006200963137 /* AppDelegate.swift */,
 				EDB4A2841A8C006200963137 /* ViewController.swift */,
 				ED27B7071A99727A00B1BE91 /* Finder.swift */,
+				ED27B7121A9D729600B1BE91 /* Tools.swift */,
 				EDB4A2861A8C006200963137 /* Main.storyboard */,
 				EDB4A2891A8C006200963137 /* Images.xcassets */,
 				EDB4A28B1A8C006200963137 /* LaunchScreen.xib */,
@@ -189,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				ED27B70A1A99729E00B1BE91 /* FinderSpec.swift */,
+				ED27B7151A9D73C500B1BE91 /* ToolsSpec.swift */,
 				EDD8D90E1A8C5A0A003D0ABD /* ViewControllerSpec.swift */,
 				EDB4A2961A8C006200963137 /* Supporting Files */,
 			);
@@ -429,6 +436,7 @@
 				EDB4A2851A8C006200963137 /* ViewController.swift in Sources */,
 				ED27B7081A99727A00B1BE91 /* Finder.swift in Sources */,
 				EDB4A2831A8C006200963137 /* AppDelegate.swift in Sources */,
+				ED27B7131A9D729600B1BE91 /* Tools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,7 +446,9 @@
 			files = (
 				EDD8D9101A8D70E9003D0ABD /* ViewController.swift in Sources */,
 				ED27B7091A99727A00B1BE91 /* Finder.swift in Sources */,
+				ED27B7141A9D729600B1BE91 /* Tools.swift in Sources */,
 				EDD8D90F1A8C5A0A003D0ABD /* ViewControllerSpec.swift in Sources */,
+				ED27B7161A9D73C500B1BE91 /* ToolsSpec.swift in Sources */,
 				ED27B70B1A99729E00B1BE91 /* FinderSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
