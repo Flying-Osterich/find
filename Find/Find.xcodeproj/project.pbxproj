@@ -301,6 +301,7 @@
 					};
 					EDB4A27C1A8C006200963137 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = PLH8EV8LKK;
 					};
 					EDB4A2911A8C006200963137 = {
 						CreatedOnToolsVersion = 6.1.1;
