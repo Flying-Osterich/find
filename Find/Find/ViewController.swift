@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var textField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func findButtonPressed(sender: UIButton) {
+        var attributedString = Highlighter().highlight(textField.text, inString: textView.text)
+        textView.attributedText = attributedString
+    }
 
 }
 

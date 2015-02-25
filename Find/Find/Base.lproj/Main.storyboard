@@ -18,22 +18,62 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gUE-l1-be5">
-                                <rect key="frame" x="16" y="165" width="568" height="415"/>
+                                <rect key="frame" x="16" y="164" width="568" height="416"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration" label="Searchable Content"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="search"/>
                             </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1j2-yh-V1O" userLabel="Container View">
+                                <rect key="frame" x="195" y="71" width="210" height="30"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rme-QG-U70">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" label="Search Input"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="3a7-D8-YEs"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vC0-Bb-Go2">
+                                        <rect key="frame" x="158" y="0.0" width="52" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" label="Find Button"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="52" id="WP3-3c-LCW"/>
+                                        </constraints>
+                                        <state key="normal" title="Find">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="findButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QpD-2M-Kg0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="vC0-Bb-Go2" secondAttribute="trailing" id="2gx-HG-TJi"/>
+                                    <constraint firstAttribute="bottom" secondItem="vC0-Bb-Go2" secondAttribute="bottom" id="6AZ-v0-xDT"/>
+                                    <constraint firstItem="vC0-Bb-Go2" firstAttribute="leading" secondItem="Rme-QG-U70" secondAttribute="trailing" constant="8" id="ZEW-61-eud"/>
+                                    <constraint firstItem="Rme-QG-U70" firstAttribute="leading" secondItem="1j2-yh-V1O" secondAttribute="leading" id="agq-Ei-kmH"/>
+                                    <constraint firstAttribute="bottom" secondItem="Rme-QG-U70" secondAttribute="bottom" id="cHx-V9-Fb9"/>
+                                    <constraint firstItem="vC0-Bb-Go2" firstAttribute="top" secondItem="1j2-yh-V1O" secondAttribute="top" id="uLr-Xl-7Nq"/>
+                                    <constraint firstItem="Rme-QG-U70" firstAttribute="top" secondItem="1j2-yh-V1O" secondAttribute="top" id="xM1-ux-oIe"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="gUE-l1-be5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="CAS-DC-6Tm"/>
-                            <constraint firstItem="gUE-l1-be5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="145" id="IoP-1L-ZxY"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gUE-l1-be5" secondAttribute="bottom" constant="20" id="o5M-on-9Gx"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="gUE-l1-be5" secondAttribute="trailing" id="zRN-gz-Yxv"/>
+                            <constraint firstItem="gUE-l1-be5" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="1pC-od-d5r"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gUE-l1-be5" secondAttribute="bottom" constant="20" id="7f2-lj-bGM"/>
+                            <constraint firstItem="1j2-yh-V1O" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="51" id="AGc-ZL-I47"/>
+                            <constraint firstItem="gUE-l1-be5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="nck-Eb-6mB"/>
+                            <constraint firstItem="gUE-l1-be5" firstAttribute="top" secondItem="1j2-yh-V1O" secondAttribute="bottom" constant="63" id="tk2-Y1-ZWE"/>
+                            <constraint firstItem="1j2-yh-V1O" firstAttribute="centerX" secondItem="gUE-l1-be5" secondAttribute="centerX" id="wPS-Yn-iXr"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="textField" destination="Rme-QG-U70" id="0VK-7N-bpe"/>
                         <outlet property="textView" destination="gUE-l1-be5" id="hBo-z8-Wl4"/>
                     </connections>
                 </viewController>
