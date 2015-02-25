@@ -14,6 +14,9 @@
 		ED27B7081A99727A00B1BE91 /* Finder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27B7071A99727A00B1BE91 /* Finder.swift */; };
 		ED27B7091A99727A00B1BE91 /* Finder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27B7071A99727A00B1BE91 /* Finder.swift */; };
 		ED27B70B1A99729E00B1BE91 /* FinderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27B70A1A99729E00B1BE91 /* FinderSpec.swift */; };
+		ED27B70D1A9D681C00B1BE91 /* Highlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27B70C1A9D681C00B1BE91 /* Highlighter.swift */; };
+		ED27B70E1A9D681C00B1BE91 /* Highlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27B70C1A9D681C00B1BE91 /* Highlighter.swift */; };
+		ED27B7111A9D687700B1BE91 /* HighlighterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27B7101A9D687700B1BE91 /* HighlighterSpec.swift */; };
 		ED27B7131A9D729600B1BE91 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27B7121A9D729600B1BE91 /* Tools.swift */; };
 		ED27B7141A9D729600B1BE91 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27B7121A9D729600B1BE91 /* Tools.swift */; };
 		ED27B7161A9D73C500B1BE91 /* ToolsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27B7151A9D73C500B1BE91 /* ToolsSpec.swift */; };
@@ -58,6 +61,8 @@
 		ED27B7041A9458DF00B1BE91 /* KIF+SwiftExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KIF+SwiftExtension.swift"; sourceTree = "<group>"; };
 		ED27B7071A99727A00B1BE91 /* Finder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Finder.swift; sourceTree = "<group>"; };
 		ED27B70A1A99729E00B1BE91 /* FinderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinderSpec.swift; sourceTree = "<group>"; };
+		ED27B70C1A9D681C00B1BE91 /* Highlighter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Highlighter.swift; sourceTree = "<group>"; };
+		ED27B7101A9D687700B1BE91 /* HighlighterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighlighterSpec.swift; sourceTree = "<group>"; };
 		ED27B7121A9D729600B1BE91 /* Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		ED27B7151A9D73C500B1BE91 /* ToolsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolsSpec.swift; sourceTree = "<group>"; };
 		EDB4A27D1A8C006200963137 /* Find.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Find.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,6 +151,15 @@
 			name = "Essentials for Swift";
 			sourceTree = "<group>";
 		};
+		ED27B70F1A9D682900B1BE91 /* AppScreen */ = {
+			isa = PBXGroup;
+			children = (
+				EDB4A2821A8C006200963137 /* AppDelegate.swift */,
+				EDB4A2841A8C006200963137 /* ViewController.swift */,
+			);
+			name = AppScreen;
+			sourceTree = "<group>";
+		};
 		EDB4A2741A8C006200963137 = {
 			isa = PBXGroup;
 			children = (
@@ -171,9 +185,9 @@
 		EDB4A27F1A8C006200963137 /* Find */ = {
 			isa = PBXGroup;
 			children = (
-				EDB4A2821A8C006200963137 /* AppDelegate.swift */,
-				EDB4A2841A8C006200963137 /* ViewController.swift */,
+				ED27B70F1A9D682900B1BE91 /* AppScreen */,
 				ED27B7071A99727A00B1BE91 /* Finder.swift */,
+				ED27B70C1A9D681C00B1BE91 /* Highlighter.swift */,
 				ED27B7121A9D729600B1BE91 /* Tools.swift */,
 				EDB4A2861A8C006200963137 /* Main.storyboard */,
 				EDB4A2891A8C006200963137 /* Images.xcassets */,
@@ -195,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				ED27B70A1A99729E00B1BE91 /* FinderSpec.swift */,
+				ED27B7101A9D687700B1BE91 /* HighlighterSpec.swift */,
 				ED27B7151A9D73C500B1BE91 /* ToolsSpec.swift */,
 				EDD8D90E1A8C5A0A003D0ABD /* ViewControllerSpec.swift */,
 				EDB4A2961A8C006200963137 /* Supporting Files */,
@@ -436,6 +451,7 @@
 				EDB4A2851A8C006200963137 /* ViewController.swift in Sources */,
 				ED27B7081A99727A00B1BE91 /* Finder.swift in Sources */,
 				EDB4A2831A8C006200963137 /* AppDelegate.swift in Sources */,
+				ED27B70D1A9D681C00B1BE91 /* Highlighter.swift in Sources */,
 				ED27B7131A9D729600B1BE91 /* Tools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,6 +460,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED27B70E1A9D681C00B1BE91 /* Highlighter.swift in Sources */,
+				ED27B7111A9D687700B1BE91 /* HighlighterSpec.swift in Sources */,
 				EDD8D9101A8D70E9003D0ABD /* ViewController.swift in Sources */,
 				ED27B7091A99727A00B1BE91 /* Finder.swift in Sources */,
 				ED27B7141A9D729600B1BE91 /* Tools.swift in Sources */,
