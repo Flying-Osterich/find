@@ -15,9 +15,9 @@ before_all do
   # increment_build_number
 
   ipa({
-    workspace: "Find.xcworkspace",
-    configuration: "Debug",
-    scheme: "Find",
+    workspace: ENV["WORKSPACE"],
+    configuration: ENV["DEBUG"],
+    scheme: ENV["SCHEME"],
   })
 
   # xctool
