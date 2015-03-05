@@ -7,12 +7,9 @@
 //
 
 class FunctionalTests: KIFTestCase {
-    func clearTextFromTextView() {
-        tester.clearTextFromViewWithAccessibilityLabel(TextView.searchableContent.rawValue)
-    }
-    
-    func clearTextFromTextField() {
-        tester.clearTextFromViewWithAccessibilityLabel(TextField.searchInput.rawValue)
+    func clearTextFrom(textInputView: String) {
+        let label = accessibilityLabelForClass(textInputView)
+        tester.clearTextFromViewWithAccessibilityLabel(label)
     }
 }
 
@@ -20,7 +17,7 @@ class FunctionalTests: KIFTestCase {
 class AddTextTests: FunctionalTests {
     
     func testTextToTextView() {
-        clearTextFromTextView()
+        clearTextFrom(TextView.type.rawValue)
         addTextToTextView()
     }
     
@@ -29,10 +26,10 @@ class AddTextTests: FunctionalTests {
 class HighlightTextTests: FunctionalTests {
     
     func testHighlightWordInSentence() {
-        clearTextFromTextView()
+        clearTextFrom(TextView.type.rawValue)
         addTextToTextView()
         
-        clearTextFromTextField()
+        clearTextFrom(TextField.type.rawValue)
         addSearchToTextField()
         
         pressFindButton()
@@ -85,15 +82,32 @@ private extension HighlightTextTests {
 
 private extension FunctionalTests {
     enum FindButton: String {
+        case type = "UIButton"
         case findButton = "Find Button"
     }
     
     enum TextView: String {
+        case type = "UITextView"
         case searchableContent = "Searchable Content"
     }
     
     enum TextField: String {
+        case type = "UITextField"
         case searchInput = "Search Input"
+    }
+    
+    func accessibilityLabelForClass(className : String) -> String {
+        var label : String
+        switch className {
+            case "UITextField" :
+                label = TextField.searchInput.rawValue
+            case "UITextView" :
+                label = TextView.searchableContent.rawValue
+            default :
+                XCTFail("clearText can only clearText from 'UITextField' or 'UITextView'")
+                label = ""
+        }
+        return label
     }
 }
 
