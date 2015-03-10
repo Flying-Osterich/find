@@ -14,8 +14,8 @@ class Finder {
         var ranges = [NSRange]()
         let expectedRegex = NSRegularExpression(pattern: "\(string)", options: .CaseInsensitive, error: &error)
         if let regex = expectedRegex  {
-            let count = countElements(inString)
-            regex.enumerateMatchesInString(inString, options: .ReportProgress, range: NSMakeRange(0, count)) { (var result, var matchingFlags, var stop) in
+            let charCount = count(inString)
+            regex.enumerateMatchesInString(inString, options: .ReportProgress, range: NSMakeRange(0, charCount)) { (var result, var matchingFlags, var stop) in
                 if (result != nil) {
                     ranges += [result.range]
                 }

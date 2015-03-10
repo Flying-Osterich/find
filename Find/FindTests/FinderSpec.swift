@@ -4,7 +4,7 @@ import Nimble
 class FinderSpec: QuickSpec {
     override func spec() {
         describe("a Finder") {
-            it("should locate all the occurances of a string in a string") {
+            it("should locate all the occurances of a string in a string", {
                 let stringOfWords = "these words make a string of words"
                 let finder = Finder()
                 let ranges = finder.find("word", inString: stringOfWords)
@@ -16,15 +16,15 @@ class FinderSpec: QuickSpec {
                 let secondOccurance = ranges[1]
                 expect(secondOccurance.length).to(equal(4))
                 expect(secondOccurance.location).to(equal(29))
-            }
+            })
             
             describe("#find:inString:") {
-                it("should return an empty array if a match was not found") {
+                it("should return an empty array if a match was not found", {
                     let string = "this is a string with characters"
                     let finder = Finder()
                     let ranges = finder.find("word", inString: string)
                     expect(ranges).to(equal([]))
-                }
+                })
             }
         }
     }

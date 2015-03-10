@@ -18,6 +18,6 @@ class Highlighter {
             mutableAttibutedString.addAttribute(NSBackgroundColorAttributeName, value: UIColor.yellowColor(), range: range)
         }
         
-        return mutableAttibutedString.copy() as NSAttributedString
+        return mutableAttibutedString.copy() as! NSAttributedString
     }
 }

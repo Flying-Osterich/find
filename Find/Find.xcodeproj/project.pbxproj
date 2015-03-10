@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2FF3EEB9831CE60FE51CB3D6 /* libPods-FindFunctionalTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDF8B11447C0409580248604 /* libPods-FindFunctionalTests.a */; };
+		6DD8CA0595599B9BE47D1F9A /* Pods_FindFunctionalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB22BDA420358FDAC8330925 /* Pods_FindFunctionalTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		7D0FD2298C89A551E0C77333 /* libPods-FindTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFF7E5EAE816E93E9D274DE2 /* libPods-FindTests.a */; };
 		B5DBE473A53C83257E65772A /* Pods_FindTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A24B15036C2FF71E18D68E34 /* Pods_FindTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		ED27B6FA1A94570700B1BE91 /* FindFunctionalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27B6F91A94570700B1BE91 /* FindFunctionalTests.swift */; };
 		ED27B7051A9458DF00B1BE91 /* KIF+SwiftExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27B7041A9458DF00B1BE91 /* KIF+SwiftExtension.swift */; };
@@ -53,7 +54,8 @@
 		6311801A7A979BC4A872B3CE /* Pods-FindTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FindTests/Pods-FindTests.release.xcconfig"; sourceTree = "<group>"; };
 		A24B15036C2FF71E18D68E34 /* Pods_FindTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8684D28391702692B013C62 /* Pods-FindFunctionalTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindFunctionalTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FindFunctionalTests/Pods-FindFunctionalTests.debug.xcconfig"; sourceTree = "<group>"; };
-		DDF8B11447C0409580248604 /* libPods-FindFunctionalTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FindFunctionalTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFF7E5EAE816E93E9D274DE2 /* libPods-FindTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FindTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB22BDA420358FDAC8330925 /* Pods_FindFunctionalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindFunctionalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED27B6F51A94570700B1BE91 /* FindFunctionalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindFunctionalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED27B6F81A94570700B1BE91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED27B6F91A94570700B1BE91 /* FindFunctionalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFunctionalTests.swift; sourceTree = "<group>"; };
@@ -82,7 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FF3EEB9831CE60FE51CB3D6 /* libPods-FindFunctionalTests.a in Frameworks */,
+				6DD8CA0595599B9BE47D1F9A /* Pods_FindFunctionalTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +100,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5DBE473A53C83257E65772A /* Pods_FindTests.framework in Frameworks */,
+				7D0FD2298C89A551E0C77333 /* libPods-FindTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,7 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				A24B15036C2FF71E18D68E34 /* Pods_FindTests.framework */,
-				DDF8B11447C0409580248604 /* libPods-FindFunctionalTests.a */,
+				BFF7E5EAE816E93E9D274DE2 /* libPods-FindTests.a */,
+				EB22BDA420358FDAC8330925 /* Pods_FindFunctionalTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -237,6 +241,7 @@
 				ED27B6F21A94570700B1BE91 /* Frameworks */,
 				ED27B6F31A94570700B1BE91 /* Resources */,
 				F3E66F2E3F8A7BFAA873B845 /* Copy Pods Resources */,
+				CA0A655361424186FE47972A /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -401,6 +406,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CA0A655361424186FE47972A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FindFunctionalTests/Pods-FindFunctionalTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CC9CFD5F94051120C62E286A /* Check Pods Manifest.lock */ = {
