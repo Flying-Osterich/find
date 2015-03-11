@@ -1,0 +1,7 @@
+[
+  "-workspace", "Find.xcworkspace",
+  "-scheme", "Find",
+  "-configuration", "Debug",
+  "-sdk", "iphonesimulator",
+  "-arch", "i386"
+]
