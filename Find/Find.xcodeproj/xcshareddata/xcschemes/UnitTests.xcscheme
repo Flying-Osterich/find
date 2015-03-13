@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0610"
+   LastUpgradeVersion = "0630"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -23,28 +23,14 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EDB4A2911A8C006200963137"
                BuildableName = "FindTests.xctest"
                BlueprintName = "FindTests"
-               ReferencedContainer = "container:Find.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ED27B6F41A94570700B1BE91"
-               BuildableName = "FindFunctionalTests.xctest"
-               BlueprintName = "FindFunctionalTests"
                ReferencedContainer = "container:Find.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -63,16 +49,6 @@
                BlueprintIdentifier = "EDB4A2911A8C006200963137"
                BuildableName = "FindTests.xctest"
                BlueprintName = "FindTests"
-               ReferencedContainer = "container:Find.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ED27B6F41A94570700B1BE91"
-               BuildableName = "FindFunctionalTests.xctest"
-               BlueprintName = "FindFunctionalTests"
                ReferencedContainer = "container:Find.xcodeproj">
             </BuildableReference>
          </TestableReference>
