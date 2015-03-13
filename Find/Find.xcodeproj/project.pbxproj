@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6DD8CA0595599B9BE47D1F9A /* Pods_FindFunctionalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB22BDA420358FDAC8330925 /* Pods_FindFunctionalTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		7D0FD2298C89A551E0C77333 /* libPods-FindTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFF7E5EAE816E93E9D274DE2 /* libPods-FindTests.a */; };
 		B5DBE473A53C83257E65772A /* Pods_FindTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A24B15036C2FF71E18D68E34 /* Pods_FindTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		ED079E971AAFF835005315BE /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED079E961AAFF835005315BE /* ActionViewController.swift */; };
 		ED079E991AAFF835005315BE /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED079E981AAFF835005315BE /* MainInterface.storyboard */; };
@@ -78,7 +77,6 @@
 		6311801A7A979BC4A872B3CE /* Pods-FindTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FindTests/Pods-FindTests.release.xcconfig"; sourceTree = "<group>"; };
 		A24B15036C2FF71E18D68E34 /* Pods_FindTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8684D28391702692B013C62 /* Pods-FindFunctionalTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindFunctionalTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FindFunctionalTests/Pods-FindFunctionalTests.debug.xcconfig"; sourceTree = "<group>"; };
-		BFF7E5EAE816E93E9D274DE2 /* libPods-FindTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FindTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB22BDA420358FDAC8330925 /* Pods_FindFunctionalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindFunctionalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED079E921AAFF835005315BE /* FindAction.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FindAction.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED079E951AAFF835005315BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -135,7 +133,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5DBE473A53C83257E65772A /* Pods_FindTests.framework in Frameworks */,
-				7D0FD2298C89A551E0C77333 /* libPods-FindTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,7 +143,6 @@
 			isa = PBXGroup;
 			children = (
 				A24B15036C2FF71E18D68E34 /* Pods_FindTests.framework */,
-				BFF7E5EAE816E93E9D274DE2 /* libPods-FindTests.a */,
 				EB22BDA420358FDAC8330925 /* Pods_FindFunctionalTests.framework */,
 			);
 			name = Frameworks;
