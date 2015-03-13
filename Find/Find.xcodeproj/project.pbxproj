@@ -847,6 +847,7 @@
 				ED079E9E1AAFF835005315BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ED27B6FD1A94570700B1BE91 /* Build configuration list for PBXNativeTarget "FindFunctionalTests" */ = {
 			isa = XCConfigurationList;
