@@ -11,32 +11,35 @@ before_all do
   # sh "./customShellScript.sh"
 
   cocoapods
+  xctool :'build-tests'
+end
 
+lane :test do
+  xctool :'run-tests'
+end
+
+lane :beta do
+  # snapshot
+  # sigh
   # increment_build_number
-
   ipa({
     workspace: ENV["WORKSPACE"],
     configuration: ENV["DEBUG"],
     scheme: ENV["SCHEME"],
   })
-
-  # xctool
-end
-
-lane :test do
-  snapshot
-end
-
-lane :beta do
-  snapshot
-  sigh
   deliver :skip_deploy, :beta
   # sh "your_script.sh"
 end
 
 lane :deploy do
-  snapshot
-  sigh
+  # snapshot
+  # sigh
+  # increment_build_number
+  ipa({
+    workspace: ENV["WORKSPACE"],
+    configuration: ENV["RELEASE"],
+    scheme: ENV["SCHEME"],
+  })
   deliver :skip_deploy, :force
   # frameit
 end
