@@ -28,6 +28,8 @@
 		EDB4A2881A8C006200963137 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB4A2861A8C006200963137 /* Main.storyboard */; };
 		EDB4A28A1A8C006200963137 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB4A2891A8C006200963137 /* Images.xcassets */; };
 		EDB4A28D1A8C006200963137 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDB4A28B1A8C006200963137 /* LaunchScreen.xib */; };
+		EDD5CBB21AB7D570000703EB /* sun.html in Resources */ = {isa = PBXBuildFile; fileRef = EDD5CBB11AB7D570000703EB /* sun.html */; };
+		EDD5CBB51AB7D740000703EB /* ParserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD5CBB41AB7D740000703EB /* ParserSpec.swift */; };
 		EDD5CBB71AB7D806000703EB /* TestTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD5CBB61AB7D806000703EB /* TestTools.swift */; };
 		EDD8D90F1A8C5A0A003D0ABD /* ViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD8D90E1A8C5A0A003D0ABD /* ViewControllerSpec.swift */; };
 		EDD8D9101A8D70E9003D0ABD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4A2841A8C006200963137 /* ViewController.swift */; };
@@ -103,6 +105,8 @@
 		EDB4A28C1A8C006200963137 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		EDB4A2921A8C006200963137 /* FindTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB4A2971A8C006200963137 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDD5CBB11AB7D570000703EB /* sun.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sun.html; sourceTree = "<group>"; };
+		EDD5CBB41AB7D740000703EB /* ParserSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserSpec.swift; sourceTree = "<group>"; };
 		EDD5CBB61AB7D806000703EB /* TestTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTools.swift; sourceTree = "<group>"; };
 		EDD8D90E1A8C5A0A003D0ABD /* ViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -265,10 +269,12 @@
 		EDB4A2951A8C006200963137 /* FindTests */ = {
 			isa = PBXGroup;
 			children = (
-				ED27B70A1A99729E00B1BE91 /* FinderSpec.swift */,
-				ED27B7101A9D687700B1BE91 /* HighlighterSpec.swift */,
-				ED27B7151A9D73C500B1BE91 /* ToolsSpec.swift */,
+				EDD5CBB31AB7D575000703EB /* FinderFixtures */,
 				EDD8D90E1A8C5A0A003D0ABD /* ViewControllerSpec.swift */,
+				ED27B7101A9D687700B1BE91 /* HighlighterSpec.swift */,
+				ED27B70A1A99729E00B1BE91 /* FinderSpec.swift */,
+				EDD5CBB41AB7D740000703EB /* ParserSpec.swift */,
+				ED27B7151A9D73C500B1BE91 /* ToolsSpec.swift */,
 				EDB4A2961A8C006200963137 /* Supporting Files */,
 			);
 			path = FindTests;
@@ -277,9 +283,18 @@
 		EDB4A2961A8C006200963137 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EDD5CBB61AB7D806000703EB /* TestTools.swift */,
 				EDB4A2971A8C006200963137 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EDD5CBB31AB7D575000703EB /* FinderFixtures */ = {
+			isa = PBXGroup;
+			children = (
+				EDD5CBB11AB7D570000703EB /* sun.html */,
+			);
+			name = FinderFixtures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -442,6 +457,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDD8D9111A8D7503003D0ABD /* Main.storyboard in Resources */,
+				EDD5CBB21AB7D570000703EB /* sun.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,12 +591,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED27B70E1A9D681C00B1BE91 /* Highlighter.swift in Sources */,
+				EDD5CBB71AB7D806000703EB /* TestTools.swift in Sources */,
 				ED27B7111A9D687700B1BE91 /* HighlighterSpec.swift in Sources */,
 				EDD8D9101A8D70E9003D0ABD /* ViewController.swift in Sources */,
 				ED27B7091A99727A00B1BE91 /* Finder.swift in Sources */,
 				ED27B7141A9D729600B1BE91 /* Tools.swift in Sources */,
 				EDD8D90F1A8C5A0A003D0ABD /* ViewControllerSpec.swift in Sources */,
 				ED27B7161A9D73C500B1BE91 /* ToolsSpec.swift in Sources */,
+				EDD5CBB51AB7D740000703EB /* ParserSpec.swift in Sources */,
 				ED27B70B1A99729E00B1BE91 /* FinderSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
