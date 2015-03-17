@@ -31,6 +31,8 @@
 		EDD5CBB21AB7D570000703EB /* sun.html in Resources */ = {isa = PBXBuildFile; fileRef = EDD5CBB11AB7D570000703EB /* sun.html */; };
 		EDD5CBB51AB7D740000703EB /* ParserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD5CBB41AB7D740000703EB /* ParserSpec.swift */; };
 		EDD5CBB71AB7D806000703EB /* TestTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD5CBB61AB7D806000703EB /* TestTools.swift */; };
+		EDD5CBB91AB7E7AB000703EB /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD5CBB81AB7E7AB000703EB /* Parser.swift */; };
+		EDD5CBBA1AB7E7F7000703EB /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD5CBB81AB7E7AB000703EB /* Parser.swift */; };
 		EDD8D90F1A8C5A0A003D0ABD /* ViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD8D90E1A8C5A0A003D0ABD /* ViewControllerSpec.swift */; };
 		EDD8D9101A8D70E9003D0ABD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4A2841A8C006200963137 /* ViewController.swift */; };
 		EDD8D9111A8D7503003D0ABD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB4A2861A8C006200963137 /* Main.storyboard */; };
@@ -108,6 +110,7 @@
 		EDD5CBB11AB7D570000703EB /* sun.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sun.html; sourceTree = "<group>"; };
 		EDD5CBB41AB7D740000703EB /* ParserSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserSpec.swift; sourceTree = "<group>"; };
 		EDD5CBB61AB7D806000703EB /* TestTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTools.swift; sourceTree = "<group>"; };
+		EDD5CBB81AB7E7AB000703EB /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		EDD8D90E1A8C5A0A003D0ABD /* ViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -247,8 +250,9 @@
 			isa = PBXGroup;
 			children = (
 				ED27B70F1A9D682900B1BE91 /* AppScreen */,
-				ED27B7071A99727A00B1BE91 /* Finder.swift */,
 				ED27B70C1A9D681C00B1BE91 /* Highlighter.swift */,
+				ED27B7071A99727A00B1BE91 /* Finder.swift */,
+				EDD5CBB81AB7E7AB000703EB /* Parser.swift */,
 				ED27B7121A9D729600B1BE91 /* Tools.swift */,
 				EDB4A2861A8C006200963137 /* Main.storyboard */,
 				EDB4A2891A8C006200963137 /* Images.xcassets */,
@@ -580,6 +584,7 @@
 			files = (
 				EDB4A2851A8C006200963137 /* ViewController.swift in Sources */,
 				ED27B7081A99727A00B1BE91 /* Finder.swift in Sources */,
+				EDD5CBB91AB7E7AB000703EB /* Parser.swift in Sources */,
 				EDB4A2831A8C006200963137 /* AppDelegate.swift in Sources */,
 				ED27B70D1A9D681C00B1BE91 /* Highlighter.swift in Sources */,
 				ED27B7131A9D729600B1BE91 /* Tools.swift in Sources */,
@@ -591,6 +596,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED27B70E1A9D681C00B1BE91 /* Highlighter.swift in Sources */,
+				EDD5CBBA1AB7E7F7000703EB /* Parser.swift in Sources */,
 				EDD5CBB71AB7D806000703EB /* TestTools.swift in Sources */,
 				ED27B7111A9D687700B1BE91 /* HighlighterSpec.swift in Sources */,
 				EDD8D9101A8D70E9003D0ABD /* ViewController.swift in Sources */,
