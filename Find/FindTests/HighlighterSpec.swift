@@ -4,7 +4,7 @@ import Nimble
 class HighlighterSpec: QuickSpec {
     override func spec() {
         describe("a Highlighter") {
-            it("should change the backgroundColor to highlight a string within a string", {
+            it("should change the backgroundColor to highlight a string within a string") {
                 
                 let string = "a String"
                 let enclosingString = "there is a String in this string"
