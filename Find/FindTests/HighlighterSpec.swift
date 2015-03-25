@@ -22,6 +22,25 @@ class HighlighterSpec: QuickSpec {
                     }
                 }
                 expect(hasAttributes).to(beTrue())
+            }
+            
+            context ("given html", {
+                it("should wrap the desire string with the <mark> html tag") {
+                    
+                    let string = "string"
+                    let htmlWithString = "<p>some text is here and a string needs hightlighted</p>"
+                    let rangeOfString = NSMakeRange(26, 6)
+                    
+                    let highlighter = Highlighter()
+                    let htmlStringWithHighlight = highlighter.highlight(string, inHtml:htmlWithString)
+                    
+                    let finder = Finder()
+                    let openMarkTagRanges = finder.find("<mark>", inString: htmlStringWithHighlight)
+                    expect(openMarkTagRanges.count) == 1
+                    
+                    let closeMarkTagRanges = finder.find("</mark>", inString: htmlStringWithHighlight)
+                    expect(closeMarkTagRanges.count) == 1
+                }
             })
         }
     }

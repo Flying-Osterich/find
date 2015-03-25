@@ -9,6 +9,17 @@
 import Foundation
 import UIKit
 
+extension String
+{
+    func index(intIndex: Int) -> Index {
+        var index = self.startIndex
+        for _ in 0...intIndex {
+            index = index.successor()
+        }
+        return index
+    }
+}
+
 class Highlighter {
     func highlight(string:String, inString:String) -> NSAttributedString {
         let mutableAttibutedString = NSMutableAttributedString(string: inString)
@@ -19,5 +30,14 @@ class Highlighter {
         }
         
         return mutableAttibutedString.copy() as! NSAttributedString
+    }
+    
+    func highlight(string:String, inHtml:String) -> String {
+        var mutString = inHtml
+        if let rangeOfString = Finder().findFirst(string, inString: inHtml) {
+            mutString.splice("</mark>", atIndex: inHtml.index(rangeOfString.location + rangeOfString.length))
+            mutString.splice("<mark>", atIndex: inHtml.index(rangeOfString.location))
+        }
+        return mutString
     }
 }
