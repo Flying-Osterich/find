@@ -9,8 +9,8 @@ class ToolsSpec: QuickSpec {
                 let range2 = NSMakeRange(0, 0)
                 let range3 = NSMakeRange(2, 2)
                 
-                expect(range1).to(equal(range2))
-                expect(range1).notTo(equal(range3))
+                expect(range1) == range2
+                expect(range1) != range3
             }
         }
     }
