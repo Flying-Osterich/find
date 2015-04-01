@@ -1,7 +1,7 @@
 PODS:
-  - KIF (3.2.0):
-    - KIF/XCTest (= 3.2.0)
-  - KIF/XCTest (3.2.0)
+  - KIF (3.2.1):
+    - KIF/XCTest (= 3.2.1)
+  - KIF/XCTest (3.2.1)
   - Nimble (0.4.1)
   - Quick (0.3.0)
 
@@ -11,8 +11,8 @@ DEPENDENCIES:
   - Quick
 
 SPEC CHECKSUMS:
-  KIF: 6f94a23566fd05b809f5d3bc5231a965b51121b9
+  KIF: ef1691e54e1d969c3b4fd0b5b56a3d7ddf37f216
   Nimble: 36913d5c822a29b3ace4113c197c79eb766a3615
   Quick: 91a8e2ee5bb25eff88ebd0e7553abf728a5ac9bd
 
-COCOAPODS: 0.36.0
+COCOAPODS: 0.36.1
