@@ -12,6 +12,10 @@
 		ED079E971AAFF835005315BE /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED079E961AAFF835005315BE /* ActionViewController.swift */; };
 		ED079E991AAFF835005315BE /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED079E981AAFF835005315BE /* MainInterface.storyboard */; };
 		ED079E9C1AAFF835005315BE /* FindAction.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = ED079E921AAFF835005315BE /* FindAction.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		ED1E1BDC1AC24A2800267981 /* Highlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27B70C1A9D681C00B1BE91 /* Highlighter.swift */; };
+		ED1E1BDD1AC24AA200267981 /* Finder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27B7071A99727A00B1BE91 /* Finder.swift */; };
+		ED1E1BDE1AC24CEE00267981 /* TestTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD5CBB61AB7D806000703EB /* TestTools.swift */; };
+		ED1E1BE01AC24D0F00267981 /* javascript.js in Resources */ = {isa = PBXBuildFile; fileRef = ED1E1BDF1AC24D0F00267981 /* javascript.js */; };
 		ED27B6FA1A94570700B1BE91 /* FindFunctionalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27B6F91A94570700B1BE91 /* FindFunctionalTests.swift */; };
 		ED27B7051A9458DF00B1BE91 /* KIF+SwiftExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27B7041A9458DF00B1BE91 /* KIF+SwiftExtension.swift */; };
 		ED27B7081A99727A00B1BE91 /* Finder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27B7071A99727A00B1BE91 /* Finder.swift */; };
@@ -87,6 +91,7 @@
 		ED079E951AAFF835005315BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED079E961AAFF835005315BE /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
 		ED079E981AAFF835005315BE /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		ED1E1BDF1AC24D0F00267981 /* javascript.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = javascript.js; sourceTree = "<group>"; };
 		ED27B6F51A94570700B1BE91 /* FindFunctionalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindFunctionalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED27B6F81A94570700B1BE91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED27B6F91A94570700B1BE91 /* FindFunctionalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFunctionalTests.swift; sourceTree = "<group>"; };
@@ -172,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				ED079E961AAFF835005315BE /* ActionViewController.swift */,
+				ED1E1BDF1AC24D0F00267981 /* javascript.js */,
 				ED079E981AAFF835005315BE /* MainInterface.storyboard */,
 				ED079E941AAFF835005315BE /* Supporting Files */,
 			);
@@ -436,6 +442,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED079E991AAFF835005315BE /* MainInterface.storyboard in Resources */,
+				ED1E1BE01AC24D0F00267981 /* javascript.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,6 +573,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED079E971AAFF835005315BE /* ActionViewController.swift in Sources */,
+				ED1E1BDD1AC24AA200267981 /* Finder.swift in Sources */,
+				ED1E1BDC1AC24A2800267981 /* Highlighter.swift in Sources */,
+				ED1E1BDE1AC24CEE00267981 /* TestTools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
