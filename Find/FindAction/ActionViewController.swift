@@ -46,7 +46,7 @@ class ActionViewController: UIViewController, UISearchBarDelegate {
     func exportExtensionContent() {
         let extensionItem = NSExtensionItem()
         extensionItem.attachments = [NSItemProvider(item: [NSExtensionJavaScriptFinalizeArgumentKey:["bgColor":"red"]],
-            typeIdentifier: kUTTypePropertyList as String)]
+                                          typeIdentifier: kUTTypePropertyList as String)]
         self.extensionContext!.completeRequestReturningItems([extensionItem], completionHandler: nil)
     }
     
