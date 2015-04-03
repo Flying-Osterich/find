@@ -6,13 +6,24 @@ function TagContentWrapper() {
 		return wrapper.outerHTML;
 	}
 
-	this.wrapOccurencesOf = function(subject, wrapperCreator) {
-		var wrappedSubject = wrapStringWithWrapper(subject, wrapperCreator());
-
+	var replaceOccurencesOfStringWithStringInDocument = function(string, replacementString) {
 		var allElements = document.getElementsByTagName('span');
 		for (var i = 0; i < allElements.length; ++i) {
 			var element = allElements[i];
-			element.innerHTML = element.innerHTML.replace(subject, wrappedSubject);
+			element.innerHTML = element.innerHTML.replace(string, replacementString);
+		}
+	}
+
+	this.wrapOccurencesOf = function(subject, wrapperCreator) {
+		var wrappedSubject = wrapStringWithWrapper(subject, wrapperCreator());
+		replaceOccurencesOfStringWithStringInDocument(subject, wrappedSubject)
+	};
+	
+	this.removeWrapperAround = function(tag) {
+		var allElements = document.getElementsByTagName(tag);
+		for (var i = 0; i < allElements.length; ++i) {
+			var element = allElements[i];
+			element.outerHTML = element.innerHTML;
 		}
 	};
 }
@@ -25,6 +36,12 @@ var highlightWrapper = function(subject) {
 	});
 }
 
+
+var clearHighlight = function() {
+	tagContentWrapper.removeWrapperAround("mark")
+}
+
+
 var MyExtensionJavaScriptClass = function() {};
 
 MyExtensionJavaScriptClass.prototype = {
@@ -35,6 +52,7 @@ MyExtensionJavaScriptClass.prototype = {
 	},
 
 	finalize: function(arguments) {
+		clearHighlight();
 		highlightWrapper(arguments["string"]);
 	}
 };
