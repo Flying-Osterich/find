@@ -1,5 +1,5 @@
 function TagContentWrapper() {
-  var self = this;
+	var self = this;
 
 	var wrapStringWithWrapper = function(subject, wrapper) {
 		wrapper.innerHTML = subject;
@@ -20,22 +20,23 @@ function TagContentWrapper() {
 var tagContentWrapper = new TagContentWrapper;
 
 var highlightWrapper = function(subject) {
-  tagContentWrapper.wrapOccurencesOf(subject, function() {
-    return document.createElement("mark");
-  });
+	tagContentWrapper.wrapOccurencesOf(subject, function() {
+		return document.createElement("mark");
+	});
 }
 
 var MyExtensionJavaScriptClass = function() {};
- 
+
 MyExtensionJavaScriptClass.prototype = {
-    run: function(arguments) {
-		arguments.completionFunction({"baseURI" : document.baseURI});
-    },
- 
-    finalize: function(arguments) {
+	run: function(arguments) {
+		arguments.completionFunction({
+			"baseURI": document.baseURI
+		});
+	},
+
+	finalize: function(arguments) {
 		highlightWrapper(arguments["string"]);
-		console.log(document.getElementsByTagName('span'));
-    }
+	}
 };
 
 var ExtensionPreprocessingJS = new MyExtensionJavaScriptClass;
