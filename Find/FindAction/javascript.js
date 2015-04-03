@@ -12,16 +12,7 @@ function TagContentWrapper() {
 		var allElements = document.getElementsByTagName('span');
 		for (var i = 0; i < allElements.length; ++i) {
 			var element = allElements[i];
-			var regularExpression = new RegExp(String(subject));
-			var splitResults = element.innerHTML.split(regularExpression);
-			if (splitResults.length > 1) {
-				for (var j = 0; j < splitResults.length; ++j) {
-					if (j % 2 == 0) {
-						var newString = splitResults[j] + wrappedSubject + splitResults[j+1];
-						element.innerHTML = newString;
-					}
-				}
-			}
+			element.innerHTML = element.innerHTML.replace(subject, wrappedSubject);
 		}
 	};
 }
