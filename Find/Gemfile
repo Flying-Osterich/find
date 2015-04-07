@@ -1,4 +1,8 @@
 source "http://rubygems.org"
 
 gem 'cocoapods'
+
+## KrauseFx
 gem 'fastlane'
+gem 'snapshot'
+
