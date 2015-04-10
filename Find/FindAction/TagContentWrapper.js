@@ -41,21 +41,5 @@ var clearHighlight = function() {
 	tagContentWrapper.removeWrapperAround("mark")
 }
 
-
-var MyExtensionJavaScriptClass = function() {};
-
-MyExtensionJavaScriptClass.prototype = {
-	run: function(arguments) {
-		arguments.completionFunction({
-			"document": document.documentElement.innerHTML,
-			"baseURI": document.baseURI
-		});
-	},
-
-	finalize: function(arguments) {
-		clearHighlight();
-		highlightWrapper(arguments["string"]);
-	}
-};
-
-var ExtensionPreprocessingJS = new MyExtensionJavaScriptClass;
+clearHighlight();
+highlightWrapper(arguments["%@"]);

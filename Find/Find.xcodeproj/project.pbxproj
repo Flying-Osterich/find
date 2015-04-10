@@ -12,6 +12,11 @@
 		ED079E971AAFF835005315BE /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED079E961AAFF835005315BE /* ActionViewController.swift */; };
 		ED079E991AAFF835005315BE /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED079E981AAFF835005315BE /* MainInterface.storyboard */; };
 		ED079E9C1AAFF835005315BE /* FindAction.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = ED079E921AAFF835005315BE /* FindAction.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		ED1745B21AD62E290080348B /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1745B11AD62E290080348B /* WebView.swift */; };
+		ED1745B41AD634570080348B /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1745B31AD634570080348B /* WebView.swift */; };
+		ED1745B51AD6346A0080348B /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1745B31AD634570080348B /* WebView.swift */; };
+		ED1745B61AD6346D0080348B /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1745B31AD634570080348B /* WebView.swift */; };
+		ED1745B71AD637780080348B /* javascript.js in Resources */ = {isa = PBXBuildFile; fileRef = ED1E1BDF1AC24D0F00267981 /* javascript.js */; };
 		ED1E1BDC1AC24A2800267981 /* Highlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27B70C1A9D681C00B1BE91 /* Highlighter.swift */; };
 		ED1E1BDD1AC24AA200267981 /* Finder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27B7071A99727A00B1BE91 /* Finder.swift */; };
 		ED1E1BDE1AC24CEE00267981 /* TestTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD5CBB61AB7D806000703EB /* TestTools.swift */; };
@@ -27,6 +32,7 @@
 		ED27B7131A9D729600B1BE91 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27B7121A9D729600B1BE91 /* Tools.swift */; };
 		ED27B7141A9D729600B1BE91 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27B7121A9D729600B1BE91 /* Tools.swift */; };
 		ED27B7161A9D73C500B1BE91 /* ToolsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27B7151A9D73C500B1BE91 /* ToolsSpec.swift */; };
+		ED70EB831AD7395E009779E4 /* TagContentWrapper.js in Resources */ = {isa = PBXBuildFile; fileRef = ED70EB821AD7395E009779E4 /* TagContentWrapper.js */; };
 		EDB4A2831A8C006200963137 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4A2821A8C006200963137 /* AppDelegate.swift */; };
 		EDB4A2851A8C006200963137 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4A2841A8C006200963137 /* ViewController.swift */; };
 		EDB4A2881A8C006200963137 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB4A2861A8C006200963137 /* Main.storyboard */; };
@@ -91,6 +97,8 @@
 		ED079E951AAFF835005315BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED079E961AAFF835005315BE /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
 		ED079E981AAFF835005315BE /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		ED1745B11AD62E290080348B /* WebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		ED1745B31AD634570080348B /* WebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		ED1E1BDF1AC24D0F00267981 /* javascript.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = javascript.js; sourceTree = "<group>"; };
 		ED27B6F51A94570700B1BE91 /* FindFunctionalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindFunctionalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED27B6F81A94570700B1BE91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -103,6 +111,7 @@
 		ED27B7101A9D687700B1BE91 /* HighlighterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighlighterSpec.swift; sourceTree = "<group>"; };
 		ED27B7121A9D729600B1BE91 /* Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		ED27B7151A9D73C500B1BE91 /* ToolsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolsSpec.swift; sourceTree = "<group>"; };
+		ED70EB821AD7395E009779E4 /* TagContentWrapper.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = TagContentWrapper.js; sourceTree = "<group>"; };
 		EDB4A27D1A8C006200963137 /* Find.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Find.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB4A2811A8C006200963137 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDB4A2821A8C006200963137 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -177,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				ED079E961AAFF835005315BE /* ActionViewController.swift */,
+				ED70EB821AD7395E009779E4 /* TagContentWrapper.js */,
 				ED1E1BDF1AC24D0F00267981 /* javascript.js */,
 				ED079E981AAFF835005315BE /* MainInterface.storyboard */,
 				ED079E941AAFF835005315BE /* Supporting Files */,
@@ -260,6 +270,7 @@
 				ED27B7071A99727A00B1BE91 /* Finder.swift */,
 				EDD5CBB81AB7E7AB000703EB /* Parser.swift */,
 				ED27B7121A9D729600B1BE91 /* Tools.swift */,
+				ED1745B31AD634570080348B /* WebView.swift */,
 				EDB4A2861A8C006200963137 /* Main.storyboard */,
 				EDB4A2891A8C006200963137 /* Images.xcassets */,
 				EDB4A28B1A8C006200963137 /* LaunchScreen.xib */,
@@ -279,12 +290,13 @@
 		EDB4A2951A8C006200963137 /* FindTests */ = {
 			isa = PBXGroup;
 			children = (
-				EDD5CBB31AB7D575000703EB /* FinderFixtures */,
+				EDD5CBB31AB7D575000703EB /* Fixtures */,
 				EDD8D90E1A8C5A0A003D0ABD /* ViewControllerSpec.swift */,
 				ED27B7101A9D687700B1BE91 /* HighlighterSpec.swift */,
 				ED27B70A1A99729E00B1BE91 /* FinderSpec.swift */,
 				EDD5CBB41AB7D740000703EB /* ParserSpec.swift */,
 				ED27B7151A9D73C500B1BE91 /* ToolsSpec.swift */,
+				ED1745B11AD62E290080348B /* WebView.swift */,
 				EDB4A2961A8C006200963137 /* Supporting Files */,
 			);
 			path = FindTests;
@@ -299,12 +311,12 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		EDD5CBB31AB7D575000703EB /* FinderFixtures */ = {
+		EDD5CBB31AB7D575000703EB /* Fixtures */ = {
 			isa = PBXGroup;
 			children = (
 				EDD5CBB11AB7D570000703EB /* sun.html */,
 			);
-			name = FinderFixtures;
+			name = Fixtures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -442,6 +454,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED079E991AAFF835005315BE /* MainInterface.storyboard in Resources */,
+				ED70EB831AD7395E009779E4 /* TagContentWrapper.js in Resources */,
 				ED1E1BE01AC24D0F00267981 /* javascript.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -469,6 +482,7 @@
 			files = (
 				EDD8D9111A8D7503003D0ABD /* Main.storyboard in Resources */,
 				EDD5CBB21AB7D570000703EB /* sun.html in Resources */,
+				ED1745B71AD637780080348B /* javascript.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,6 +587,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED079E971AAFF835005315BE /* ActionViewController.swift in Sources */,
+				ED1745B61AD6346D0080348B /* WebView.swift in Sources */,
 				ED1E1BDD1AC24AA200267981 /* Finder.swift in Sources */,
 				ED1E1BDC1AC24A2800267981 /* Highlighter.swift in Sources */,
 				ED1E1BDE1AC24CEE00267981 /* TestTools.swift in Sources */,
@@ -598,6 +613,7 @@
 				EDB4A2831A8C006200963137 /* AppDelegate.swift in Sources */,
 				ED27B70D1A9D681C00B1BE91 /* Highlighter.swift in Sources */,
 				ED27B7131A9D729600B1BE91 /* Tools.swift in Sources */,
+				ED1745B41AD634570080348B /* WebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,6 +623,7 @@
 			files = (
 				ED27B70E1A9D681C00B1BE91 /* Highlighter.swift in Sources */,
 				EDD5CBBA1AB7E7F7000703EB /* Parser.swift in Sources */,
+				ED1745B51AD6346A0080348B /* WebView.swift in Sources */,
 				EDD5CBB71AB7D806000703EB /* TestTools.swift in Sources */,
 				ED27B7111A9D687700B1BE91 /* HighlighterSpec.swift in Sources */,
 				EDD8D9101A8D70E9003D0ABD /* ViewController.swift in Sources */,
@@ -614,6 +631,7 @@
 				ED27B7141A9D729600B1BE91 /* Tools.swift in Sources */,
 				EDD8D90F1A8C5A0A003D0ABD /* ViewControllerSpec.swift in Sources */,
 				ED27B7161A9D73C500B1BE91 /* ToolsSpec.swift in Sources */,
+				ED1745B21AD62E290080348B /* WebView.swift in Sources */,
 				EDD5CBB51AB7D740000703EB /* ParserSpec.swift in Sources */,
 				ED27B70B1A99729E00B1BE91 /* FinderSpec.swift in Sources */,
 			);

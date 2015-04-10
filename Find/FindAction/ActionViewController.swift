@@ -11,6 +11,7 @@ import MobileCoreServices
 
 class ActionViewController: UIViewController, UISearchBarDelegate {
 
+    @IBOutlet weak var webView: UIWebView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var searchBarBottomConstraint: NSLayoutConstraint!
     
@@ -36,9 +37,26 @@ class ActionViewController: UIViewController, UISearchBarDelegate {
             let inputItem = item as! NSExtensionItem
             for provider: AnyObject in inputItem.attachments! {
                 let itemProvider = provider as! NSItemProvider
-                itemProvider.loadItemForTypeIdentifier(kUTTypePropertyList as String, options: nil, completionHandler:{ (thing, error) in
-                    println("have the kUTTypePropertyList thing \(thing)")
-                })
+                let providedTypeIdentifiers = itemProvider.registeredTypeIdentifiers
+                for identifier in providedTypeIdentifiers {
+                    itemProvider.loadItemForTypeIdentifier(identifier as! String, options: nil, completionHandler:{ (object, error) in
+                        println("have the kUTTypePropertyList propertyList \(object)")
+                        println("error \(error)")
+                        let dictionary = object as! NSDictionary
+                        let jsResultKeys: AnyObject? = dictionary[NSExtensionJavaScriptPreprocessingResultsKey]
+//                        let object : AnyObject? = NSKeyedArchiver(NSDictionaty()).decodeObjectForKey(NSExtensionJavaScriptPreprocessingResultsKey)
+                        if let itIsObject: AnyObject = object {
+                            let fileOpener = FileOpener()
+                            if let fileJS = fileOpener.open("TagContentWrapper.js") {
+                                let js = NSString(format: fileJS, "can")
+                                
+                                //                            self.webView.loadHTMLString(propertyList["document"], baseURL: propertyList["baseURI"])
+                                let newHtml = self.webView.stringByEvaluatingJavaScriptFromString(js as String)
+                                println("new html \(newHtml)")
+                            }
+                        }
+                    })
+                }
             }
         }
     }
