@@ -7,10 +7,14 @@ function TagContentWrapper() {
 	}
 
 	var replaceOccurencesOfStringWithStringInDocument = function(string, replacementString) {
-		var allElements = document.getElementsByTagName('span');
-		for (var i = 0; i < allElements.length; ++i) {
-			var element = allElements[i];
-			element.innerHTML = element.innerHTML.replace(string, replacementString);
+		var textWrappingTags = ('span', 'p');
+		for (var i = 0; i < textWrappingTags.length; ++i) {
+			var tag = textWrappingTags[i];
+			var allElements = document.getElementsByTagName(tag);
+			for (var j = 0; j < allElements.length; ++j) {
+				var element = allElements[j];
+				element.innerHTML = element.innerHTML.replace(string, replacementString);
+			}			
 		}
 	}
 
