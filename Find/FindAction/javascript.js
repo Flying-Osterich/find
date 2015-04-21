@@ -17,6 +17,16 @@ function TagContentWrapper() {
 			}			
 		}
 	}
+	
+	var strip = function(html)
+	{
+	   var tmp = document.createElement("DIV");
+	   tmp.innerHTML = html;
+	   console.log(tmp)
+	   console.log(tmp.textContent)
+	   console.log(tmp.innerText)
+	   return tmp.textContent || tmp.innerText || "";
+	}
 
 	this.wrapOccurencesOf = function(subject, wrapperCreator) {
 		var wrappedSubject = wrapStringWithWrapper(subject, wrapperCreator());
@@ -27,7 +37,10 @@ function TagContentWrapper() {
 		var allElements = document.getElementsByTagName(tag);
 		for (var i = 0; i < allElements.length; ++i) {
 			var element = allElements[i];
-			element.outerHTML = element.innerHTML;
+			console.log(element)
+			element = strip(element.outerHTML)
+			console.log(element)
+			console.log("")
 		}
 	};
 }
@@ -51,7 +64,8 @@ var MyExtensionJavaScriptClass = function() {};
 MyExtensionJavaScriptClass.prototype = {
 	run: function(arguments) {
 		arguments.completionFunction({
-			"baseURI": document.baseURI
+			"baseURI": document.baseURI,
+			"document": document.documentElement.innerHTML
 		});
 	},
 
