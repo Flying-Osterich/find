@@ -1,5 +1,6 @@
 import Quick
 import Nimble
+import Foundation
 
 class HighlighterSpec: QuickSpec {
     override func spec() {
@@ -23,6 +24,30 @@ class HighlighterSpec: QuickSpec {
                 }
                 expect(hasAttributes).to(beTrue())
             }
+            
+            context ("given NSAttributedString", {
+                it("should change the backgroundColor to highlight a string") {
+                    
+                    let string = "a String"
+                    let enclosingString = "there is a String in this string"
+                    let attributedEnclosedString = NSAttributedString(string: enclosingString)
+                    
+                    let rangeOfString = NSMakeRange(9, 8)
+                    
+                    let highlighter = Highlighter()
+                    let attributedEnclosedStringWithHighlights = highlighter.highlight(string, inString:attributedEnclosedString)
+                    
+                    var hasAttributes = false
+                    attributedEnclosedStringWithHighlights.enumerateAttribute(NSBackgroundColorAttributeName, inRange: NSMakeRange(0, attributedEnclosedStringWithHighlights.length), options: .LongestEffectiveRangeNotRequired) { (var value, var range, stop) in
+                        hasAttributes = true
+                        if range == rangeOfString  {
+                            expect(value).notTo(beNil())
+                            expect(value as? NSObject).to(beAKindOf(UIColor))
+                        }
+                    }
+                    expect(hasAttributes).to(beTrue())
+                }
+            })
             
             context ("given html", {
                 it("should wrap the desire string with the <mark> html tag") {
