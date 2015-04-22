@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func findButtonPressed(sender: UIButton) {
-        var attributedString = Highlighter().highlight(textField.text, inString: textView.text)
+        var attributedString = Highlighter().highlight(textField.text, inString: textView.attributedText)
         textView.attributedText = attributedString
     }
 
