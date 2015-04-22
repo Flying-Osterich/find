@@ -22,13 +22,16 @@ extension String
 
 class Highlighter {
     func highlight(string:String, inString:String) -> NSAttributedString {
-        let mutableAttibutedString = NSMutableAttributedString(string: inString)
-        
-        let ranges = Finder().find(string, inString: inString)
+        let attibutedString = NSAttributedString(string: inString)
+        return self.highlight(string, inString: attibutedString)
+    }
+    
+    func highlight(string:String, inString:NSAttributedString) -> NSAttributedString {
+        let mutableAttibutedString = NSMutableAttributedString(attributedString: inString)
+        let ranges = Finder().find(string, inString: mutableAttibutedString.string)
         for range in ranges {
             mutableAttibutedString.addAttribute(NSBackgroundColorAttributeName, value: UIColor.yellowColor(), range: range)
         }
-        
         return mutableAttibutedString.copy() as! NSAttributedString
     }
     
