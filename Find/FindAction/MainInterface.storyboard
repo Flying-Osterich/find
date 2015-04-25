@@ -1,42 +1,57 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ObA-dk-sSI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Uow-i6-MYS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
-        <!--Image-->
+        <!--Navigation Controller-->
+        <scene sceneID="sav-K7-mFY">
+            <objects>
+                <navigationController id="Uow-i6-MYS" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rIe-zc-Ygv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ObA-dk-sSI" kind="relationship" relationship="rootViewController" id="vM2-tG-S87"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u9B-2W-mnf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-160" y="-124"/>
+        </scene>
+        <!--Find-->
         <scene sceneID="7MM-of-jgj">
             <objects>
-                <viewController title="Image" id="ObA-dk-sSI" customClass="ActionViewController" customModule="FindAction" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Find" id="ObA-dk-sSI" customClass="ActionViewController" customModule="FindAction" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qkL-Od-lgU"/>
                         <viewControllerLayoutGuide type="bottom" id="n38-gi-rB5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zMn-AG-sqS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="1Yl-Gv-208">
-                                <rect key="frame" x="0.0" y="484" width="320" height="44"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vbY-mq-vEJ">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="484"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="460"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Yl-Gv-208">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="n38-gi-rB5" firstAttribute="top" secondItem="1Yl-Gv-208" secondAttribute="bottom" id="Vs5-Ey-5Zv"/>
-                            <constraint firstItem="1Yl-Gv-208" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" id="j9z-Vl-npj"/>
-                            <constraint firstAttribute="trailing" secondItem="1Yl-Gv-208" secondAttribute="trailing" id="n8U-Ns-tEz"/>
-                        </constraints>
                     </view>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="528"/>
+                    <navigationItem key="navigationItem" id="RyV-kK-nUN">
+                        <barButtonItem key="leftBarButtonItem" title="Done" style="done" id="cnq-I0-BPa">
+                            <connections>
+                                <action selector="donePressed:" destination="ObA-dk-sSI" id="jus-uN-Su6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="1Yl-Gv-208" id="IyX-X8-8ct"/>
-                        <outlet property="searchBarBottomConstraint" destination="Vs5-Ey-5Zv" id="9pq-Zr-sdt"/>
                         <outlet property="view" destination="zMn-AG-sqS" id="Qma-de-2ek"/>
                         <outlet property="webView" destination="vbY-mq-vEJ" id="n9x-h9-Tf4"/>
                     </connections>

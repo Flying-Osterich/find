@@ -10,24 +10,29 @@ import UIKit
 import MobileCoreServices
 
 class ActionViewController: UIViewController, UISearchBarDelegate {
-
+    
     @IBOutlet weak var webView: UIWebView!
     @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var searchBarBottomConstraint: NSLayoutConstraint!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         consumeExtensionContent()
-        observeKeyboardNotifications()
-
+        
         self.searchBar.becomeFirstResponder()
         self.searchBar.delegate = self
     }
     
+    func loadWebViewWithDocument(document: String!, baseURL: NSURL!) {
+        webView.loadHTMLString(document, baseURL: baseURL)
+    }
+    
+    @IBAction func donePressed(sender: AnyObject) {
+        exportExtensionContent()
+    }
+    
 // MARK : UISearchBarDelegate
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-        exportExtensionContent()
     }
     
 // MARK: Extension
@@ -40,21 +45,14 @@ class ActionViewController: UIViewController, UISearchBarDelegate {
                 let providedTypeIdentifiers = itemProvider.registeredTypeIdentifiers
                 for identifier in providedTypeIdentifiers {
                     itemProvider.loadItemForTypeIdentifier(identifier as! String, options: nil, completionHandler:{ (object, error) in
-                        println("have the kUTTypePropertyList propertyList \(object)")
-                        println("error \(error)")
-                        let dictionary = object as! NSDictionary
-                        let jsResultKeys: AnyObject? = dictionary[NSExtensionJavaScriptPreprocessingResultsKey]
-//                        let object : AnyObject? = NSKeyedArchiver(NSDictionaty()).decodeObjectForKey(NSExtensionJavaScriptPreprocessingResultsKey)
-                        if let itIsObject: AnyObject = object {
-                            let fileOpener = FileOpener()
-                            if let fileJS = fileOpener.open("TagContentWrapper.js") {
-                                let js = NSString(format: fileJS, "can")
-                                
-                                //                            self.webView.loadHTMLString(propertyList["document"], baseURL: propertyList["baseURI"])
-                                let newHtml = self.webView.stringByEvaluatingJavaScriptFromString(js as String)
-                                println("new html \(newHtml)")
-                            }
+                        if error != nil {
+                            println("\(error)")
                         }
+                        let dictionary = object as! NSDictionary
+                        let userDictionary: AnyObject? = dictionary[NSExtensionJavaScriptPreprocessingResultsKey]
+                        let document: AnyObject? = userDictionary!.valueForKey("document")
+                        let baseURI: AnyObject? = userDictionary!.valueForKey("baseURI")
+                        self.loadWebViewWithDocument(document as! String, baseURL: NSURL(string: baseURI as! String))
                     })
                 }
             }
@@ -66,31 +64,5 @@ class ActionViewController: UIViewController, UISearchBarDelegate {
         extensionItem.attachments = [NSItemProvider(item: [NSExtensionJavaScriptFinalizeArgumentKey:["string":self.searchBar.text]],
                                           typeIdentifier: kUTTypePropertyList as String)]
         self.extensionContext!.completeRequestReturningItems([extensionItem], completionHandler: nil)
-    }
-    
-// MARK: Keyboard
-    
-    func observeKeyboardNotifications() {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
-    }
-    
-    deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self);
-    }
-    
-    func keyboardWillShow(notification: NSNotification) {
-        var info = notification.userInfo!
-        var keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
-        
-        UIView.animateWithDuration(0.1, animations: { () -> Void in
-            self.searchBarBottomConstraint.constant = keyboardFrame.size.height
-        })
-    }
-    
-    func keyboardWillHide(notification: NSNotification) {
-        UIView.animateWithDuration(0.1, animations: { () -> Void in
-            self.searchBarBottomConstraint.constant = 0
-        })
     }
 }
